@@ -1,0 +1,143 @@
+\documentclass[]{final_report}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Input project details
+\def\studentname{Colin Smith}
+\def\projecttitle{Using RFID to Remember}
+\def\supervisorname{Lorcan Coyle}
+\def\moderatorname{Your Moderator Name}
+
+
+\begin{document}
+
+\maketitle
+%\tableofcontents\pdfbookmark[0]{Table of Contents}{toc}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Your Abstract here
+
+\begin{abstract}
+
+\textbf{\textsl{This document serves as a guideline for the preparation of your final report as well as a layout and formating template. Please read it carefully, and strictly follow the instructions.}}
+
+
+\end{abstract}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Acknowledgments
+
+\chapter*{Acknowledgments}
+
+In your Acknowledgments section, give credit to all the people who helped you in your project.
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Introduction
+
+\chapter{Introduction}
+
+
+The project report is a very important part of your project and its preparation and presentation should be of extremely high quality. Remember that a large portion of the marks for your project are awarded for this report. The following sections will provide some detailed guidelines and advice on the writing of this report.
+
+The format of the final report is fixed by the template of this document and you must  strictly adhere to it.  Note that the length of your report is strictly limited. Apart from a cover page, abstract, table of contents and references, the recommended number of content pages\footnote{In terms of the report length, appendices are also considered as content pages.} is 30 of which at most 10 are dedicated to background research. You should not write more than 30 pages unless you feel you have good reason to, but in any case the maximum acceptable report length is 35 content pages. These limits mean that you do not need to write dross to ``pad out'' your report. At the same time it does not make your task easy. Recall Pascal's remark: ``I am sorry for the length of my letter, but I had not the time to write a short one.''
+
+Also remember that any implementation produced should also be submitted (see Chapter~\ref{chapter2})
+
+\chapter{\label{chapter2} Background Research}
+
+\section{An Introduction to RFID Technology}
+
+In recent years RFID has become increasingly recognised for its many potential mainstream applications and uses. There are many types of RFID\cite{intel} available, each suited to different types of these applications. From the highest level RFID can be divided into two classes, active and passive\cite{intel}. The system I am implementing is based on passive RFID, where by the RFID tags do not require their own power source but are instead activated by the reader using magnetic induction. Active RFID would require each individual tag to have its own built in power supply which would prove extremely impractical in the context of this project.  The magnetic induction technique is often known as near field RFID, which refers to the range of the reader and the close proximity it requires to activate a tag.
+
+As I mentioned near field RFID is based on the principles of magnetic induction. \cite{intel}An RFID reader contains a coil through which it passes an alternating electrical current which in turn creates a localised alternating magnetic field. Each tag contains a smaller coil. When the reader comes into close proximity to a tag, and it is within the alternating magnetic field of the reader, an alternating voltage is created across the tags own coil. A capacitor causes a charge to build up within it, thus powering the tag. The tag can then generate its own magnetic field which opposes that of the reader. The reader interprets this as an increasing current. By varying the load over the tags coil, there are resulting variations in the tags magnetic field, corresponding to its binary ID. The reader can interpret these signals with the change in current being created through its own coil.
+
+
+\subsection{Chatchayanuson's Kitchen Tracker}
+
+There are currently many common applications for RFID technology, and it is the focus of much scientific research. One interesting application for the technology is the \cite{ece}"Kitchen Tracker" system. The systems goal is to aid everyday tasks, specifically grocery shopping. The system consists of stationary RFID readers in a kitchen and tags placed on key grocery items within it. As items are removed from the kitchen, ie; used or thrown away, the RFID readers are used to identify these items. This data is used to assist in grocery shopping indicating key items that are needed in the kitchen through real time synchronisation with a phone or PDA. These implementations are based on \cite{smart}smart home concepts. One important point raised by this implementation is that such technologies should be unobtrusive and blend naturally into our environment.
+
+
+\subsection {Ubiquitous Memories}
+
+The \cite{ubi}`Ubiquitous Memories` system is an incredibly innovative implementation of an RFID system. This system proposes to\cite{ubi} augment human memory through interaction with objects. From a harware perspective the system consists of a head mounted display over the left eye for displaying video to the user. This eye piece also incorporates a camera to record users activities and experiences. There is an RFID reader on one wrist to read tagged objects. These are both connected to a remote control for the system which connects to a hip mounted wearable computer connected to wireless LAN. The system records the users experiences and activities and passes them to a server to be stored in a video database. Objects related to specific events are RFID tagged. When a tag is read the system replays a video related to that object, mimicking the behaviour of human memory. When people touch objects they often recall associated memories. *The RFID readers positioning is of particular interest in the implementation of my own system. In the \cite{cait}RFID ODCSSS project 2007, a wrist mounted reader was found to result in decreased read accuracy. In such a system it is essential to balance the accuracy of the sytem with the comfort of use. It again needs to be unobtrusive and feel natural. \cite{ubi}`Ubiquitous Memories` was tested using memory and recall techniques using different memory aids, one of which being the `Ubiquitous Memories` system. This essentially determines the effectiveness of the system in aiding human memory and also offers insight into alternate ways of achieving this. This knowledge could be potentially used to refine or augment the sytem in the future. *These testing methods offer inspiration for my own testing techniques.
+
+
+\subsection {Schmidt and Gellersen's RFID glove}
+
+\cite{schmidt}With wearable computing there is often difficulty in providing computer input if systems carry high cognitive loads or performance problems in its deployment. "Schmidt" and "Gellersen"\cite{schmidt} explore this concept of human coputer interaction using an RFID based system, in an attempt to overcome the inherit shortcomings of wearable computing. The main concept is based on implicit \cite{schmidt}human computer interaction. Implicit interaction is described as actions which are not primarily intended to be used as computer input but can still be used as such in some useful way. Their implementation consists of a glove with an integrated RFID reader. The reader is connected through serial to a wearable computer. RFID tag IDs are mapped to a specific URL which increases a counter each time a tag is read. This system is more of a proof of concept then one with a specific purpose. They conclude that such an implementation effectively overcomes the traditional problems associated with user input in wearable computing, and propose that such a system would form a sound base for implementing practical applications of the technology.
+
+\subsection {Intel Project}
+
+In building useful applications with this technolgy a technique is required in order to allow the computer to correctly interpret its inputs. How can a task be identified from a set of RFID readings? In the Intel Seattle research project\cite{intel2} the concept of recognising and interpreting an individuals activites was explored. their system prototype was again an RFID enabled glove with the antenna located in the palm. This is connected to a reader with radio capabilities for comunicating with a computer. The glove components are all housed in a plastic box on the outer side of the glove, which overall makes the system particularly compact and unobtrusive. One difficulty their system faced was interpreting "variety", for example the same task could be completed in different ways or in a different order of steps. The proposed solution was to represent tasks in a sequence, or probable sequence, of the objects used, which resulted in a high level of system accuracy and performance. 
+
+
+\subsection {Lustig's RFID glove}
+
+In the 2007 ODCSSS project titled `Reminding Short-Term Memory sufferers to Complete Routine Tasks` a system was designed to identify tasks carried out by a user. My project is a continuation of this research attempting to build upon the work already achieved while focusing on a related but slightly different goal. A glove design was implemented with an RFID reader built into the palm. This was connected to a Gumstix computer with wireless capabilities. The Gumstix can connect wirelessly to a server which in turn can update a database of tag reads and pass this information to a webpage.
+
+A more simplistic yet equally effective data processing method was proposed. The system is designed to recognise individual tasks by associating each one with a number of relevant tags. A task is identified based on the percentage of associated tags that have been read, within a given time period. Each task also has a specific "end" object or the last object that will be touched in a given task, which indicates when the task has been completed. Although this method is simpler it would appear to be an effective technique for task recognition. As my work utilises and builds on the results of this project, more thorough testing of the data processing algorithms may be required. In the results of this project it was found that the gloves design was restrictive, mainly due to the RFID readers position in the palm. This is to facilitate efficient and accurate tag reads. 
+
+\section{Conclusions}
+
+
+\chapter{System Implementation}
+
+\section{Hardware Design}
+
+\section{Data Processing}
+\newpage
+
+\chapter{System Testing and Evaluation}
+\newpage
+\chapter{Conclusions and Future Work}
+\newpage
+
+%%%% ADD YOUR BIBLIOGRAPHY HERE
+\newpage
+\begin{thebibliography}{99}
+\bibitem{intel}
+	  Roy Want,
+	  \emph{An Introduction to RFID Technology}.
+	  Intel Research, California, 2005.
+	  
+	\bibitem{intel2}
+	  Matthai Philipose, Kenneth P. Fishkin, Mike Perkowitz, Donald J. Patterson, Dieter Fox, Henry Kautz, and Dirk Hahnel,
+	  \emph{Inferring Activities from Interactions with Objects}.
+	  Intel Research, Seattle, 2004.
+	  
+	  \bibitem{ece}
+	  Suppakrit Chatchayanuson, Charles Christopher Oneyama, Nachiket Shelgikar, Saravana Sivasankaran 
+	  \emph{Kitchen Tracker}.
+	  Electrical and Computer Engineering, Carnagie Mellon University, 2007.
+	  
+	  \bibitem{ubi}
+	  Tatsuyuki Kawamura, Tomohiro Fukuhara, Hideaki Takeda, Yasuyuki Kono, and Masatsugu Kidode 
+	  \emph{Ubiquitous Memories: a memory externalization system using physical objects}.
+	  Pers Ubiquit Comput 11: 287-298, 2007
+	  
+	  \bibitem{smart}
+	  Alex S. Taylor, Richard Harper, Laurel Swan, Shahram Izadi, Abigail Sellen, and Mark Perry
+	  \emph{Homes that make us Smart}.
+	  Springer-Verlag London Limited, 2006
+	  
+	  \bibitem{cait}
+	  Caitlin Lustig, Lorcan Coyle
+	  \emph{Reminding Short-Term Memory Sufferers to Complete Routine Tasks}.
+	  Technical Report UCD-CSI-2007-10, 2007
+	  
+	  \bibitem{schmidt}
+	  A. Schmidt and C. M. Hans-W. Gellerson
+	  \emph{Enabling implicit human computer interaction- a wearable rfid-tag reader}.
+	  Proc. 4th Int'l Symp. Wearable Computers (ISWC2000), pp. 193-194
+\end{thebibliography}
+\label{endpage}
+
+
+
+\end{document}
+
+\end{article}

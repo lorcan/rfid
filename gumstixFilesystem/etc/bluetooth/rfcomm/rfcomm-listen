@@ -1,0 +1,2 @@
+#!/bin/sh
+while $1 -r -f $2 listen all;do continue;done

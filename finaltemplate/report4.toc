@@ -1,0 +1,40 @@
+\contentsline {chapter}{Abstract}{3}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Project Specification}{5}{section.1.1}
+\contentsline {chapter}{\numberline {2}Background Research}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}An Introduction to RFID Technology}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Passive Vs Active RFID}{7}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}The Computer for the 21st Century}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Chatchayanuson's Kitchen Tracker}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Ubiquitous Memories}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Schmidt and Gellersen's RFID glove}{10}{section.2.6}
+\contentsline {section}{\numberline {2.7}Intel's iGlove}{11}{section.2.7}
+\contentsline {section}{\numberline {2.8}Lustig's RFID glove}{11}{section.2.8}
+\contentsline {section}{\numberline {2.9}Activity Recognition}{12}{section.2.9}
+\contentsline {section}{\numberline {2.10}Recognising Assembly Tasks}{12}{section.2.10}
+\contentsline {section}{\numberline {2.11}Conclusions}{13}{section.2.11}
+\contentsline {chapter}{\numberline {3}System Design and Implementation}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Problem Analysis}{15}{section.3.2}
+\contentsline {section}{\numberline {3.3}System Form Factor}{15}{section.3.3}
+\contentsline {section}{\numberline {3.4}Hardware Design}{16}{section.3.4}
+\contentsline {section}{\numberline {3.5}Data Processing}{19}{section.3.5}
+\contentsline {section}{\numberline {3.6}User Interfaces}{20}{section.3.6}
+\contentsline {section}{\numberline {3.7}Bluetooth}{21}{section.3.7}
+\contentsline {section}{\numberline {3.8}Full System Overview}{21}{section.3.8}
+\contentsline {chapter}{\numberline {4}System Testing and Evaluation}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}RFID Prototype}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Results}{24}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}System Form Factor}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Results}{25}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Human Readable Cues}{25}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Results}{26}{subsection.4.4.1}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusions}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Future Work}{29}{section.5.2}
+\contentsline {chapter}{\numberline {A}Cue Evaluation Survey}{31}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{31}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Survey}{31}{subsection.A.1.1}
+\contentsline {chapter}{\numberline {B}Bluetooth}{33}{appendix.B}

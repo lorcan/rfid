@@ -1,0 +1,8 @@
+Welcome to Gumstix!
+By default, this gumstix is configured for CF support.
+Unfortunately, this means MMC support has been
+disabled out of the box.  To turn on MMC and turn off CF,
+edit the file /etc/modules and comment out or delete the pcmcia (CF)
+line, and uncomment the MMC lines.  You then also need to comment out
+or remove the line "auto mwlan0" in /etc/network/interfaces if it
+exists, since it will otherwise cause the pcmcia driver to be loaded.

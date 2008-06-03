@@ -1,0 +1,8 @@
+rootfs / rootfs rw 0 0
+/dev/root / jffs2 rw 0 0
+proc /proc proc rw 0 0
+/sys /sys sysfs rw 0 0
+udev /dev ramfs rw 0 0
+devpts /dev/pts devpts rw 0 0
+tmpfs /tmp tmpfs rw 0 0
+/dev/hda1 /mnt/cf vfat rw,sync,fmask=0022,dmask=0022,codepage=cp437,iocharset=iso8859-1 0 0

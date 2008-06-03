@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# Start the serial stuff....
+#
+
+start() {
+	echo "Starting to connect to serial..."
+	# while [ ! `jobs`  ]
+	# do
+		# echo "Trying to connect to serial again"
+		# cd /root/pyserial-2.2
+		# cat /root/connect.py > /dev/null
+		# python /root/connect.py > /root/connect.log &
+		# sleep 2
+	# done
+}	
+stop() {
+	echo -n "Stopping connect to serial..."
+        # kill -9 %1	
+}
+restart() {
+	stop
+	start
+}	
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# Start the boa daemon
+#
+
+start() {
+ 	echo "Starting httpd..."
+	start-stop-daemon --start -x /usr/sbin/boa -p /var/run/boa.pid
+}	
+stop() {
+	echo -n "Stopping httpd..."
+	start-stop-daemon --stop --name boa
+}
+reload() {
+	echo -n "Reloading httpd..."
+	killall -HUP boa
+}
+restart() {
+	stop
+	start
+}	
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  reload)
+	reload
+	;;
+  restart)
+  	restart
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+

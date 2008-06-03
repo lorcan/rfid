@@ -1,0 +1,2 @@
+# IDE modules -- call script to load appropriate module
+SUBSYSTEM=="ide", ACTION=="add", ATTRS{modalias}=="ide:*", RUN+="/sbin/modprobe $env{MODALIAS}"
