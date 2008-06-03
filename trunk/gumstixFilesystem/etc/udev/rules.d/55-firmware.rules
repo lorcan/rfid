@@ -1,0 +1,3 @@
+# Firmware loading helper (replaces hotplug)
+# Firmware images go into /lib/firmware
+ACTION=="add", SUBSYSTEM=="firmware", RUN+="/lib/udev/firmware_helper"

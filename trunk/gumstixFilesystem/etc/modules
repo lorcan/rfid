@@ -1,0 +1,7 @@
+# MMC support -- uncomment the next two lines to enable MMC if not using CF
+#mmc_block
+#pxamci
+
+# Compact Flash support -- Must load smc91x first!!
+smc91x
+pcmcia

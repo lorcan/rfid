@@ -1,0 +1,14 @@
+#!/bin/sh
+PATH="/sbin:/bin"
+
+echo -n 'Loading modules: '
+(cat /etc/modules; echo) | while read module args
+do
+	case "$module" in
+		\#*|"") continue ;;
+	esac
+	echo -n "$module "
+	modprobe $module $args
+done
+echo ": Loaded."
+exit 0
