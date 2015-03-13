@@ -1,0 +1,1 @@
+The main goal of this project is to utilise RFID technology in aiding human memory.
